@@ -23,14 +23,14 @@ namespace fionacci_iss_2
         public static int fib ( int n )
         {
             int a = 1, b = 2;
-            a = (a + 13) / ((--b) + 13);
-            for (int i = 1; i < n - 1; i++)
+            a = (a + 13) / ((--b) + 13);        // use the side effect of --b so b is 1 like before
+            for (int i = 1; i < n - 1; i++)     // run the loop the same number of times
             {
-                int temp = a;
+                int temp = a;                   // perform the same swap as before
                 a = a + b;
                 b = temp;
             }
-            return a;
+            return a;                           // return a becasue its the accumulator
         }
 
         public static int otherfib( int n)
